@@ -2,7 +2,7 @@
     "name": "casper-custom",
     "description": "A clean, minimal default theme for the Ghost publishing platform",
     "demo": "https://www.adrianoamalfi.com",
-    "version": "5.7.21",
+    "version": "5.7.2-3",
     "engines": {
         "ghost": ">=5.0.0"
     },
@@ -175,5 +175,9 @@
         "extends": [
             "@tryghost:theme"
         ]
+    },
+    "dependencies": {
+        "jquery": "^3.6.3",
+        "vanilla-cookieconsent": "^2.8.9"
     }
 }
