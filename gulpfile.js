@@ -72,6 +72,23 @@ function js(done) {
     ], handleError(done));
 }
 
+function jquery(done) {
+    pump([
+        src('node_modules/jquery/dist/*.js'),
+        dest('assets/built/', {sourcemaps: '.'}),
+        livereload()
+    ], handleError(done));
+}
+
+function cookieconsent(done) {
+    pump([
+        src(['node_modules/vanilla-cookieconsent/dist/*.js',
+        'node_modules/vanilla-cookieconsent/dist/*.css']),
+        dest('assets/built/', {sourcemaps: '.'}),
+        livereload()
+    ], handleError(done));
+}
+
 function zipper(done) {
     const filename = require('./package.json').name + '.zip';
 
